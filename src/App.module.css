@@ -1,0 +1,131 @@
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -80px;
+  z-index: 10;
+  padding: 12px 20px;
+  background: var(--paper);
+  color: var(--forest);
+  font-weight: 700;
+  border: 2px solid var(--forest);
+}
+.skip:focus {
+  top: 16px;
+}
+
+.header {
+  background: var(--forest);
+  color: #fff;
+}
+
+.headerInner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 20px var(--gutter) 12px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.kicker {
+  font-size: 16px;
+  color: #d5e8db;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* 모든 화면 상단에 가상 데이터임을 표시 */
+.mockBadge {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 6px 14px;
+  background: var(--sand);
+  color: var(--ink);
+  border-radius: var(--radius);
+}
+
+.nav {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 5px solid transparent;
+}
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.navLink[aria-current='page'] {
+  border-bottom-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+.navLink:focus-visible {
+  outline-color: #fff;
+  outline-offset: -4px;
+}
+
+.navNum {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.main {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 32px var(--gutter) 56px;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 24px var(--gutter) 40px;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  color: var(--ink-muted);
+  font-size: 16px;
+  display: grid;
+  gap: 4px;
+}
+
+@media (max-width: 900px) {
+  .navList {
+    flex-wrap: wrap;
+    gap: 0 4px;
+  }
+  .navLink {
+    padding: 0 12px;
+  }
+  .navNum {
+    display: none;
+  }
+}

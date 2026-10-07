@@ -1,0 +1,141 @@
+/* 문서형 레이아웃: 좁은 본문 폭, 구분선으로 단락 구분 */
+.doc {
+  max-width: 860px;
+  background: var(--paper);
+  padding: 40px 48px 48px;
+  border: 1px solid var(--line);
+}
+.doc p + p {
+  margin-top: 12px;
+}
+
+.toc {
+  margin: 8px 0 8px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.tocTitle {
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 24px;
+  display: grid;
+  gap: 0;
+}
+.toc a {
+  display: inline-block;
+  padding: 8px 0;
+  font-weight: 600;
+}
+
+.section {
+  padding: 32px 0 8px;
+  scroll-margin-top: 16px;
+}
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.num {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--leaf);
+}
+.h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--forest);
+  margin-bottom: 14px;
+}
+
+.meta {
+  margin: 18px 0 0;
+  padding-left: 16px;
+  border-left: 4px solid var(--leaf-soft);
+  display: grid;
+  gap: 6px;
+  font-size: 17px;
+}
+.meta div {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 12px;
+}
+.meta dt {
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+.meta dd {
+  margin: 0;
+}
+
+.faq {
+  margin: 0;
+}
+.faq div {
+  padding: 14px 0;
+}
+.faq div + div {
+  border-top: 1px dashed var(--line);
+}
+.faq dt {
+  font-weight: 800;
+  font-size: 20px;
+}
+.faq dd {
+  margin: 4px 0 0;
+}
+
+.limits {
+  margin-top: 16px;
+  padding: 24px 24px 20px;
+  background: #f7f1e6;
+  border-left: 6px solid var(--clay);
+}
+.section.limits {
+  border-top: 0;
+}
+
+@media (max-width: 700px) {
+  .doc {
+    padding: 24px 20px 32px;
+  }
+  .meta div {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+.section:focus {
+  outline: none;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 14px;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.table thead th {
+  background: var(--mist);
+  font-size: 16px;
+}
+.table tbody th {
+  white-space: nowrap;
+  font-weight: 800;
+}
+.after {
+  margin-top: 16px;
+}
+.after strong {
+  margin-right: 8px;
+  color: var(--forest);
+}

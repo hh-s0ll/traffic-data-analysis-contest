@@ -1,0 +1,370 @@
+.h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.h3 {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+/* 넓은 화면: 예약 | 기준 | 계획 */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px minmax(0, 1.15fr);
+  grid-template-areas: 'slots criteria plans';
+  gap: 24px;
+  align-items: start;
+}
+.slots {
+  grid-area: slots;
+}
+.criteria {
+  grid-area: criteria;
+}
+.plans {
+  grid-area: plans;
+}
+
+/* 예약 표 */
+.privacy {
+  display: grid;
+  gap: 2px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: var(--paper);
+  border-left: 5px solid var(--forest);
+  font-size: 17px;
+}
+.privacy strong {
+  display: inline-block;
+  min-width: 118px;
+}
+.tableWrap {
+  max-height: 720px;
+  overflow: auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 17px;
+}
+.table th,
+.table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+}
+.table th {
+  position: sticky;
+  top: 0;
+  background: var(--mist);
+  font-size: 16px;
+  font-weight: 700;
+  z-index: 1;
+}
+.time {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.hospCell {
+  font-size: 16px;
+}
+.numCol {
+  text-align: right !important;
+  white-space: nowrap;
+}
+.tagCar,
+.tagHeld {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.tagCar {
+  background: var(--forest);
+  color: #fff;
+}
+.tagHeld {
+  background: var(--sand);
+  color: var(--ink);
+}
+
+/* 기준 */
+.criteria {
+  display: grid;
+  gap: 22px;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--forest);
+  border-radius: var(--radius);
+  position: sticky;
+  top: 16px;
+}
+.criteria .h2 {
+  margin-bottom: 0;
+}
+.reset {
+  min-height: 48px;
+  border: 2px solid var(--forest);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--forest);
+  font-weight: 700;
+  cursor: pointer;
+}
+.reset:hover {
+  background: var(--mist);
+}
+.rule {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 16px;
+}
+.rule ol {
+  margin: 0;
+  padding-left: 22px;
+  display: grid;
+  gap: 4px;
+}
+
+/* 계획 */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 0 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.summary div {
+  padding: 12px 14px;
+}
+.summary div + div {
+  border-left: 1px solid var(--line);
+}
+.summary dt {
+  font-size: 16px;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+.summary dd {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--forest);
+  font-variant-numeric: tabular-nums;
+}
+.of {
+  font-size: 18px;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+.carbonSum {
+  margin-bottom: 16px;
+}
+
+.car {
+  color: var(--clay);
+}
+.drt {
+  color: var(--forest);
+}
+
+.vehicleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+.vehicle {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--forest);
+  padding: 14px 18px;
+}
+.vHead {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+.vName {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--forest);
+}
+.vDest {
+  font-weight: 700;
+}
+
+.stops {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.stops li {
+  display: grid;
+  grid-template-columns: 30px 62px 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.stopNo {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--mist);
+  border: 2px solid var(--forest);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--forest);
+}
+.stopTime {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.stopName {
+  font-weight: 600;
+}
+.stopPax {
+  font-size: 17px;
+}
+
+.vStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  margin: 0 0 8px;
+}
+.vStats div {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+.vStats dt {
+  color: var(--ink-muted);
+  font-size: 16px;
+}
+.vStats dd {
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.vCarbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  font-size: 17px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.good {
+  color: var(--forest);
+}
+.bad {
+  color: var(--clay);
+}
+.vNote {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--ink-muted);
+}
+.empty {
+  padding: 16px;
+  background: var(--paper);
+  border: 1px dashed var(--line-strong);
+}
+
+.held {
+  margin-top: 28px;
+  padding: 16px 18px;
+  background: #f7f1e6;
+  border: 1px solid var(--sand);
+  border-left: 6px solid var(--clay);
+}
+.heldDesc {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.heldList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.heldList li {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0 12px;
+  padding: 8px 0;
+  border-top: 1px solid var(--sand);
+  font-size: 17px;
+}
+.heldTime {
+  font-weight: 700;
+  grid-row: span 2;
+}
+.heldPax {
+  font-weight: 700;
+}
+
+/* 중간 화면: 기준을 위로, 아래에 예약 | 계획 */
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      'criteria criteria'
+      'slots plans';
+  }
+  .criteria {
+    position: static;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+  .criteria .h2,
+  .rule {
+    grid-column: 1 / -1;
+  }
+  .reset {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'criteria' 'plans' 'slots';
+  }
+  .criteria {
+    grid-template-columns: 1fr;
+  }
+  .reset {
+    grid-column: auto;
+  }
+  .tableWrap {
+    max-height: 480px;
+  }
+}
+
+.scenario {
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 1200px) {
+  .scenario {
+    grid-column: 1 / -1;
+  }
+}

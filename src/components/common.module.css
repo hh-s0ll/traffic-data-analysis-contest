@@ -1,0 +1,206 @@
+.intro {
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.step {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--leaf);
+  margin-bottom: 4px;
+}
+
+.h1 {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--forest);
+}
+.h1:focus {
+  outline: none;
+}
+.h1:focus-visible {
+  outline: 3px solid var(--focus);
+}
+
+.lead {
+  margin-top: 10px;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.mock {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
+  padding: 12px 16px;
+  background: var(--sand);
+  border-left: 6px solid var(--clay);
+  font-size: 17px;
+}
+.mock strong {
+  color: #8a3d14;
+  font-weight: 800;
+}
+
+/* 슬라이더 */
+.stepper {
+  display: grid;
+  gap: 4px;
+}
+.stepperHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.stepperLabel {
+  font-weight: 700;
+}
+.stepperValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--forest);
+  font-variant-numeric: tabular-nums;
+}
+.unit {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.hint {
+  font-size: 16px;
+  color: var(--ink-muted);
+}
+.stepperRow {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  gap: 10px;
+  align-items: center;
+}
+.stepBtn {
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--forest);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--forest);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+.stepBtn:hover:not(:disabled) {
+  background: var(--mist);
+}
+.stepBtn:disabled {
+  border-color: var(--line);
+  color: #7d8a82;
+  cursor: not-allowed;
+}
+
+/* 하나 고르기 */
+.choice {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.choiceLegend {
+  font-weight: 700;
+  margin-bottom: 6px;
+  padding: 0;
+}
+.choiceRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.choiceItem {
+  position: relative;
+  display: inline-flex;
+}
+.choiceItem input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.choiceItem span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 2px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-weight: 600;
+  cursor: pointer;
+}
+.choiceItem input:checked + span {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: #fff;
+}
+.choiceItem input:checked + span::before {
+  content: '✓';
+  margin-right: 6px;
+}
+.choiceItem input:focus-visible + span {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 2px solid;
+  vertical-align: -4px;
+  flex: none;
+}
+
+/* 화면 성격 표시 */
+.stepRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 6px;
+}
+.stepRow .step {
+  margin-bottom: 0;
+}
+.kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid;
+}
+.analysis {
+  font-weight: 800;
+}
+.empirical {
+  color: var(--forest);
+  border-color: var(--forest);
+  background: var(--paper);
+}
+.simulation {
+  color: #7a3510;
+  border-color: var(--clay);
+  background: var(--paper);
+}
+.proposal,
+.method {
+  color: var(--ink);
+  border-color: var(--line-strong);
+  background: var(--paper);
+}

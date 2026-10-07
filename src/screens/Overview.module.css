@@ -1,0 +1,274 @@
+.hero {
+  max-width: 920px;
+  margin-bottom: 24px;
+}
+.step {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--leaf);
+  margin-bottom: 6px;
+}
+.problem {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  line-height: 1.25;
+}
+.problem:focus {
+  outline: none;
+}
+.lead {
+  margin-top: 14px;
+  font-size: 21px;
+}
+
+.mock {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 32px;
+  padding: 16px 20px;
+  background: var(--sand);
+  border-left: 8px solid var(--clay);
+}
+.mock strong {
+  font-size: 22px;
+  color: #7a3510;
+}
+
+.numbers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: var(--paper);
+  border-top: 6px solid var(--forest);
+  border-bottom: 1px solid var(--line);
+}
+.numbers li {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.numbers li + li {
+  border-left: 1px solid var(--line);
+}
+.numLabel {
+  font-size: 19px;
+  font-weight: 700;
+}
+.num {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--forest);
+  font-variant-numeric: tabular-nums;
+}
+.num span {
+  font-size: 30px;
+  margin-left: 4px;
+}
+.clay {
+  color: var(--clay);
+}
+.numDesc {
+  color: var(--ink-muted);
+  flex: 1;
+}
+.more {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 48px;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.flow {
+  margin-top: 48px;
+}
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+}
+.steps li {
+  counter-increment: step;
+  padding: 0 20px 0 0;
+  margin-right: 20px;
+  border-right: 1px solid var(--line-strong);
+}
+.steps li:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+.steps li::before {
+  content: counter(step);
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: var(--forest);
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+}
+.steps h3 {
+  font-size: 21px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.questions {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-strong);
+}
+.questions ol {
+  margin: 0;
+  padding-left: 28px;
+  display: grid;
+  gap: 4px;
+  font-size: 20px;
+}
+.questions a {
+  display: inline-block;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .numbers {
+    grid-template-columns: 1fr;
+  }
+  .numbers li + li {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+  .steps {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 0;
+  }
+  .steps li:nth-child(2n) {
+    border-right: 0;
+    margin-right: 0;
+  }
+  .problem {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .steps li {
+    border-right: 0;
+    margin-right: 0;
+  }
+}
+
+/* 공개 자료 근거 수치: 가상 값과 구분되도록 흰 바탕 + 초록 테두리 */
+.evidence {
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: var(--paper);
+  border: 2px solid var(--forest);
+  border-radius: var(--radius);
+}
+.evidenceHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.evidenceHead .h2 {
+  margin-bottom: 0;
+}
+.sourceTag {
+  padding: 2px 10px;
+  border-radius: 4px;
+  background: var(--forest);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+}
+.evList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.evNum {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--forest);
+  font-variant-numeric: tabular-nums;
+}
+.evNote {
+  margin-top: 12px;
+  font-size: 16px;
+  color: var(--ink-muted);
+}
+
+.virtual {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: var(--sand);
+  color: #7a3510;
+  font-size: 16px;
+  font-weight: 800;
+  vertical-align: 2px;
+}
+
+.stance {
+  margin-top: 48px;
+}
+.stanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+.stanceTable th,
+.stanceTable td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  width: 50%;
+}
+.stanceTable th {
+  background: var(--forest);
+  color: #fff;
+}
+.stanceTable td:first-child {
+  color: var(--ink-muted);
+}
+
+.method {
+  margin-top: 16px;
+}
+
+@media (max-width: 1000px) {
+  .evList {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

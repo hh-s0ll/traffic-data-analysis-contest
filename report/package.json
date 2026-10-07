@@ -1,0 +1,7 @@
+{
+  "name": "report-build",
+  "private": true,
+  "description": "분석보고서 Word 생성 (node build_docx.js)",
+  "scripts": { "build": "node build_docx.js" },
+  "dependencies": { "docx": "^9.8.1" }
+}

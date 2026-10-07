@@ -1,0 +1,14 @@
+geopandas==1.2.0
+mapclassify==2.11.0
+Markdown==3.11
+matplotlib==3.11.2
+numpy==2.5.3
+openpyxl==3.1.5
+pandas==3.0.6
+pyogrio==0.13.0
+pyproj==3.8.0
+scikit-learn==1.9.1
+scipy==1.18.1
+shap==0.52.0
+shapely==2.1.2
+xgboost==3.4.1

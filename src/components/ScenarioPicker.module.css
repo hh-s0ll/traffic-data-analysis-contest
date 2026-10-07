@@ -1,0 +1,42 @@
+.box {
+  display: grid;
+  gap: 10px;
+  padding: 18px 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--clay);
+  border-radius: var(--radius);
+}
+.compact {
+  display: grid;
+  gap: 8px;
+}
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: end;
+}
+.basis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: baseline;
+  font-size: 17px;
+}
+.basis strong {
+  font-size: 19px;
+}
+.provisional {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--sand);
+  color: #7a3510;
+  font-weight: 800;
+  font-size: 16px;
+}
+.explain {
+  font-size: 16px;
+  color: var(--ink-muted);
+}
