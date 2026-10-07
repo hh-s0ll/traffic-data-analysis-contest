@@ -11,8 +11,8 @@
 
 | 항목 | 링크 |
 | --- | --- |
-| 분석보고서 PDF | [report/팀명_분석보고서_미리보기.pdf](report/팀명_분석보고서_미리보기.pdf) |
-| 분석보고서 DOCX | [report/팀명_분석보고서.docx](report/팀명_분석보고서.docx) |
+| 분석보고서 PDF (작업 중) | [report/팀명_분석보고서_미리보기.pdf](report/팀명_분석보고서_미리보기.pdf) |
+| 분석보고서 DOCX (작업 중) | [report/팀명_분석보고서.docx](report/팀명_분석보고서.docx) |
 | 실제 분석 재현 안내 | [analysis/README.md](analysis/README.md) |
 | AI 활용 내역 | [docs/AI활용내역_데모.md](docs/AI활용내역_데모.md) |
 | 분석 표·수치 | [analysis/output/tables](analysis/output/tables) |
