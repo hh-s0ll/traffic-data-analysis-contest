@@ -9,7 +9,7 @@ const {
 
 const ROOT = path.join(__dirname, '..');  // 저장소 최상위 (어느 PC에서든 동작)
 const FIG = `${ROOT}/analysis/output/figures/`;
-const OUT = `${ROOT}/report/교통데이터분석공모전_분석보고서_편집본.docx`;
+const OUT = `${ROOT}/report/노인공경버스어벤저스_분석보고서.docx`;
 
 const FONT = '맑은 고딕';
 const C = { forest: '1F5D3C', mist: 'EAF2EC', line: 'B9CBBE', ink: '14231B', muted: '45554C', clay: 'B4531F', sand: 'F7F1E6' };
@@ -141,7 +141,7 @@ const { cover, body } = require(require('path').join(__dirname,'content.js'))({ 
 
 // ---------- 문서 ----------
 const doc = new Document({
-  creator: '[팀명]', title: '분석보고서',
+  creator: '노인공경버스어벤저스', title: '분석보고서',
   styles: {
     default: { document: { run: { font: FONT, size: SZ } } },
     paragraphStyles: [

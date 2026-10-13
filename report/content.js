@@ -12,7 +12,7 @@ module.exports = (h) => {
     new Table({
       width: { size: CW, type: WidthType.DXA }, columnWidths: [2200, CW - 2200], layout: TableLayoutType.FIXED,
       rows: [
-        ['이름/팀명', '[[팀명 기재]]'],
+        ['이름/팀명', '노인공경버스어벤저스'],
         ['주제', '부르지 않아도 오는 똑버스: 경기도 의료이동 상대적 취약지역 탐지와 병원 예약 연계 공동배차가 탄소를 줄이는 조건 탐색'],
       ].map(([k, v]) => new TableRow({
         children: [
