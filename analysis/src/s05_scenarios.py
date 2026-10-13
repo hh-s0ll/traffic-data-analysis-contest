@@ -30,7 +30,7 @@ RF = A["road_factor"]
 
 
 def build_areas():
-    g = gpd.read_file(PROCESSED / "gg_dong_scored.gpkg")
+    g = gpd.read_file(PROCESSED / "gyeonggi_eupmyeondong_vulnerability_scores.gpkg")
     r = g[g["adm_type"].isin(["읍", "면"])].copy()
     counts = r.groupby("SI_NM")["vulnerable"].sum()
     hosp = load_hospitals()

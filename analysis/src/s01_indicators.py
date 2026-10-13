@@ -117,11 +117,11 @@ def main():
     g["stop_density"] = g["stops"] / g["area_km2"]
     g["stops_per_1k"] = g["stops"] / (g["pop"].where(g["pop"] > 0) / 1000)
 
-    g.to_file(PROCESSED / "gg_dong.gpkg", driver="GPKG")
+    g.to_file(PROCESSED / "gyeonggi_eupmyeondong_indicators.gpkg", driver="GPKG")
     cols = ["ADM_CD", "SIGUNGU_NM", "SI_NM", "ADM_NM", "adm_type", "area_km2", "pop", "pop65", "pop75", "age_na_cells", "age_missing_cells",
             "elderly_ratio", "old75_ratio", "stops", "stop_density", "stops_per_1k", "dist_hosp_km", "nearest_hosp",
             "dist_general_km", "nearest_general", "dist_primary_km", "rep_from_stops"]
-    g[cols].to_csv(PROCESSED / "gg_dong_indicators.csv", index=False, encoding="utf-8-sig")
+    g[cols].to_csv(PROCESSED / "gyeonggi_eupmyeondong_indicators.csv", index=False, encoding="utf-8-sig")
 
     print(f"경기도 읍면동 {len(g)}곳 {g["adm_type"].value_counts().to_dict()}")
     print(f"인구 결측 {g['pop'].isna().sum()}곳, 정류장 0개 {int((g.stops==0).sum())}곳, 대표점=정류장 중앙값 {int(g.rep_from_stops.sum())}곳")

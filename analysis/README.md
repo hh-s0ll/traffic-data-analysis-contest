@@ -1,6 +1,6 @@
 # 분석 코드 (실제 공개데이터)
 
-분석보고서: [../report/팀명_분석보고서.docx](../report/팀명_분석보고서.docx) (미리보기 PDF 같은 폴더)
+분석보고서: [DOCX 편집본](../report/교통데이터분석공모전_분석보고서_편집본.docx) · [PDF 검토본](../report/교통데이터분석공모전_분석보고서_검토본.pdf)
 
 데모 웹앱(`../src`)은 가상 데이터입니다. 이 폴더는 **실제 공개데이터**로 한 분석입니다.
 
@@ -23,7 +23,7 @@ Windows에서 한글 출력이 깨지면 `PYTHONIOENCODING=utf-8`을 붙이세�
 | --- | --- |
 | `src/` | 분석 코드 (`s00` 내려받기 → `s01`·`s02`·`s02b`·`s03`·`s04`·`s05`·`s06` 분석, `run_all.py`) |
 | `requirements.txt` | 실행에 쓴 패키지 정확한 버전 |
-| `data/processed/*.csv` | 가공 결과: 읍면동별 지표, 취약도·유형, 최소 합승 인원 |
+| `data/processed/*.csv` | 가공 결과: `gyeonggi_eupmyeondong_indicators.csv`, `gyeonggi_eupmyeondong_vulnerability_scores.csv`, `gyeonggi_eupmyeondong_carbon_breakeven.csv` |
 | `output/tables/` | 보고서 표의 원수치 (t1~t22, summary_*.json, 실행 로그). 취약지역 120곳 명단은 `t12_vulnerable_120.csv`, 시뮬레이션 배출량(kg/일)과 감축률 분모(기준배출_kg일)는 `t10_yeoncheon_detail.csv` |
 | `output/figures/` | 그림 fig1~fig8 (보고서 그림 1 = fig1, 2 = fig6, 3 = fig8) |
 
@@ -45,7 +45,7 @@ SGIS zip에서는 `bnd_dong_*`, `bnd_sigungu_*.dbf`, 통계 CSV, 코드집 xlsx�
 
 | 스크립트 | 내용 | 성격 | 산출물 |
 | --- | --- | --- | --- |
-| `s01_indicators.py` | 읍면동 고령비율, 병원·종합병원 거리, 정류장 밀도 | 실증 | `data/processed/gg_dong*.{csv,gpkg}` |
+| `s01_indicators.py` | 읍면동 고령비율, 병원·종합병원 거리, 정류장 밀도 | 실증 | `data/processed/gyeonggi_eupmyeondong_*.{csv,gpkg}` |
 | `s02_vulnerability.py` | 취약도 지수, 민감도, K-평균 유형화, 그림 1~4 | 실증 | `output/tables/t1~t4`, `summary_stage1.json` |
 | `s02b_ml_validation.py` | 머신러닝 유형화 검증·설명: 가우시안 혼합·계층 군집 비교, 부트스트랩 200회 안정성, 랜덤포레스트 대리모델 순열 중요도, PCA 가중치, 그림 7 | 실증 (AI 방법론) | `t13~t16`, `summary_ml_validation.json` |
 | `s03_breakeven.py` | 취약지역별 최소 합승 인원, 거리 구간 기준표, 그림 5 | 시뮬레이션 | `t5~t7`, `summary_stage2_breakeven.json` |

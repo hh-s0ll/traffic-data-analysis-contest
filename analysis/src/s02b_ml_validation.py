@@ -48,7 +48,7 @@ def align(labels, ref, k=4):
 
 
 def main():
-    g = gpd.read_file(PROCESSED / "gg_dong_scored.gpkg")
+    g = gpd.read_file(PROCESSED / "gyeonggi_eupmyeondong_vulnerability_scores.gpkg")
     Xs = features(g)
     base = KMeans(4, n_init=50, random_state=SEED).fit(Xs)
     ref = base.labels_

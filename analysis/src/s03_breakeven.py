@@ -24,7 +24,7 @@ def n_star(one_way_km, village_km, conv, detour=A["detour_factor"], car=A["car_k
 
 
 def main():
-    d = pd.read_csv(PROCESSED / "gg_dong_scored.csv")
+    d = pd.read_csv(PROCESSED / "gyeonggi_eupmyeondong_vulnerability_scores.csv")
     d["village_km"] = np.sqrt(d["area_km2"])
     for name, conv in SCENARIOS.items():
         d[f"nstar_{name}"] = n_star(d["dist_general_km"], d["village_km"], conv).astype(int)
@@ -67,7 +67,7 @@ def main():
         "asymptote_diesel": {k: round(A["detour_factor"] * A["van_kg_per_km"] / (c * A["car_kg_per_km"]), 2) for k, c in SCENARIOS.items()},
     }
     (TABLE / "summary_stage2_breakeven.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
-    d.to_csv(PROCESSED / "gg_dong_breakeven.csv", index=False, encoding="utf-8-sig")
+    d.to_csv(PROCESSED / "gyeonggi_eupmyeondong_carbon_breakeven.csv", index=False, encoding="utf-8-sig")
 
     # 그림 5
     fig, ax = plt.subplots(figsize=(7.5, 4.8))

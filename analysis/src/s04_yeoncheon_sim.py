@@ -48,7 +48,7 @@ EF = {"경유": A["van_kg_per_km"], "전기": A["ev_van_kg_per_km"]}
 
 
 def setup():
-    g = gpd.read_file(PROCESSED / "gg_dong_scored.gpkg")
+    g = gpd.read_file(PROCESSED / "gyeonggi_eupmyeondong_vulnerability_scores.gpkg")
     y = g[g["SI_NM"] == "연천군"].copy()
     hosp = load_hospitals()
     gen = hosp[hosp["종별코드명"].isin(GENERAL_LEVEL) & hosp["has_dept"]].reset_index(drop=True)
@@ -215,7 +215,7 @@ def main():
     detail.round(4).to_csv(TABLE / "t10_yeoncheon_detail.csv", index=False, encoding="utf-8-sig")
 
     ef_unc = ef_uncertainty()
-    ef_unc.round(3).to_csv(TABLE / "t11_ef_uncertainty.csv", index=False, encoding="utf-8-sig")
+    ef_unc.round(3).to_csv(TABLE / "t11_emission_factor_uncertainty.csv", index=False, encoding="utf-8-sig")
 
     villages = pd.DataFrame([{"읍면": n, "pop65": v["pop65"], "병원": v["hosp"], "병원거리km": round(HOSP_KM[n], 1),
                               "차고지거리km": round(km(DEPOT, pos(n)), 1)} for n, v in VILL.items()])
