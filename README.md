@@ -13,6 +13,7 @@
 | --- | --- |
 | 분석보고서 PDF (작업 중) | [report/팀명_분석보고서_미리보기.pdf](report/팀명_분석보고서_미리보기.pdf) |
 | 분석보고서 DOCX (작업 중) | [report/팀명_분석보고서.docx](report/팀명_분석보고서.docx) |
+| 제출 전 체크리스트 | [report/제출_체크리스트.md](report/제출_체크리스트.md) |
 | 실제 분석 재현 안내 | [analysis/README.md](analysis/README.md) |
 | AI 활용 내역 | [docs/AI활용내역_데모.md](docs/AI활용내역_데모.md) |
 | 분석 표·수치 | [analysis/output/tables](analysis/output/tables) |
@@ -102,7 +103,7 @@ python -m venv .venv
 웹 데모는 분석 결과를 설명하고 정책 시나리오를 시연하기 위한 React/Vite 인터페이스입니다.
 
 ```bash
-npm install
+npm ci
 npm run dev        # http://localhost:5173
 npm run build      # 타입 검사 + 배포용 빌드
 npm run typecheck  # 타입 검사

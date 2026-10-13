@@ -1,0 +1,115 @@
+/* 전역 스타일: 색상 토큰, 글꼴, 접근성 기본값.
+   화면별 스타일은 각 *.module.css 에 둔다. */
+
+:root {
+  /* 기획 색상 토큰 */
+  --forest: #1f5d3c; /* 주색. 헤더, 버튼, 똑버스 관련 데이터 */
+  --leaf: #3f8f5f; /* 보조 초록. 강조, 선택 상태 */
+  --mist: #eaf2ec; /* 배경 */
+  --paper: #ffffff; /* 카드 표면 */
+  --ink: #14231b; /* 본문 텍스트 */
+  --clay: #b4531f; /* 대비색. 승용차 이동, 경고, 취약도 높음 */
+  --sand: #e8dcc8; /* 중간 단계 표현용 */
+
+  /* 파생 토큰 (위 토큰만으로 부족한 부분) */
+  --ink-muted: #45554c; /* 보조 텍스트. 흰 바탕 대비 약 7:1 */
+  --line: #c3d4c8; /* 구분선 */
+  --line-strong: #8fa899;
+  --leaf-soft: #c4dccb; /* 취약도 '보통' 단계 (mist 와 leaf 사이) */
+  --transit: #4f5d55; /* 차트의 대중교통 막대 (승용차·똑버스와 구분) */
+  --focus: #0b5cad; /* 포커스 링. 초록 배경 위에서도 보이도록 파란 계열 */
+
+  --radius: 6px;
+  --gutter: 24px;
+  --content-max: 1240px;
+
+  font-family:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo',
+    'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 18px; /* 본문 기본 18px */
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--mist);
+  -webkit-text-size-adjust: 100%;
+  word-break: keep-all;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--mist);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.3;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--forest);
+  text-underline-offset: 3px;
+}
+
+/* 키보드 포커스 링은 절대 지우지 않는다 */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* 스크린리더 전용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* 사용자가 동작 줄이기를 설정한 경우 모든 전환 효과를 끈다 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 슬라이더 공통: 터치 대상 48px 확보 */
+input[type='range'] {
+  width: 100%;
+  height: 48px;
+  accent-color: var(--forest);
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Recharts 기본 포커스 사각형이 클릭 시 보이지 않도록 마우스 포커스만 제거 */
+.recharts-wrapper *:focus:not(:focus-visible) {
+  outline: none;
+}
