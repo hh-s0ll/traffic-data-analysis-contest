@@ -50,14 +50,14 @@ export function compare(passengers: number, i: BreakEvenInput): EmissionComparis
 
 /**
  * 차량 전환율 시나리오 (기획안 5장: 보수·기본·적극 세 시나리오로 민감도 확인).
- * 보수 21.3%만 근거가 있고, 기본·적극은 임시값이다. 팀 확정 후 provisional 을 false 로 바꾼다.
+ * 21.3%는 도시 이용자 조사 참고 가정, 40%·60%는 민감도 비교 가정이다. 대상 지역 실측값이 아니다.
  */
 export interface Scenario {
   id: 'conservative' | 'base' | 'active';
   label: string;
   conversionRate: number;
   basis: string; // 근거 또는 가정 설명
-  provisional: boolean; // true 면 화면에 "임시값" 표시
+  provisional: boolean; // true 면 화면에 "가정값" 표시
 }
 
 export const SCENARIOS: Scenario[] = [
@@ -66,21 +66,21 @@ export const SCENARIOS: Scenario[] = [
     label: '보수',
     conversionRate: 0.213,
     basis:
-      '수원시정연구원 똑버스 이용자 조사에서 도입 전 자가용을 주로 이용했다는 응답 21.3%. 도시 지역 조사라 농촌에서는 낮게 잡은 값',
+      '수원시정연구원 도시 똑버스 이용자 조사 응답 21.3%를 참고한 보수 가정. 농촌 고령자 실측값은 아님',
     provisional: false,
   },
   {
     id: 'base',
     label: '기본',
     conversionRate: 0.4,
-    basis: '농촌 고령자는 자가용 의존이 더 크다는 가정. 임시값이며 팀 확정 필요',
+    basis: '전환율 40%의 민감도 비교 가정. 대상 지역 실측값 아님',
     provisional: true,
   },
   {
     id: 'active',
     label: '적극',
     conversionRate: 0.6,
-    basis: '취약지역 이용자 대부분이 원래 자가용으로 병원에 갔다는 가정. 임시값이며 팀 확정 필요',
+    basis: '전환율 60%의 민감도 비교 가정. 대상 지역 실측값 아님',
     provisional: true,
   },
 ];

@@ -1,0 +1,1485 @@
+{
+  "started_utc": "2026-10-13T07:48:41.637139+00:00",
+  "finished_utc": "2026-10-13T08:13:52.586821+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "command": [
+    "python",
+    "-u",
+    "src/run_all.py"
+  ],
+  "empty_outputs_before_run": {
+    "processed": true,
+    "tables": true,
+    "figures": true
+  },
+  "requirements": {
+    "geopandas": {
+      "required": "1.2.0",
+      "installed": "1.2.0",
+      "pass": true
+    },
+    "mapclassify": {
+      "required": "2.11.0",
+      "installed": "2.11.0",
+      "pass": true
+    },
+    "Markdown": {
+      "required": "3.11",
+      "installed": "3.11",
+      "pass": true
+    },
+    "matplotlib": {
+      "required": "3.11.2",
+      "installed": "3.11.2",
+      "pass": true
+    },
+    "numpy": {
+      "required": "2.5.3",
+      "installed": "2.5.3",
+      "pass": true
+    },
+    "openpyxl": {
+      "required": "3.1.5",
+      "installed": "3.1.5",
+      "pass": true
+    },
+    "pandas": {
+      "required": "3.0.6",
+      "installed": "3.0.6",
+      "pass": true
+    },
+    "pyogrio": {
+      "required": "0.13.0",
+      "installed": "0.13.0",
+      "pass": true
+    },
+    "pyproj": {
+      "required": "3.8.0",
+      "installed": "3.8.0",
+      "pass": true
+    },
+    "scikit-learn": {
+      "required": "1.9.1",
+      "installed": "1.9.1",
+      "pass": true
+    },
+    "scipy": {
+      "required": "1.18.1",
+      "installed": "1.18.1",
+      "pass": true
+    },
+    "shap": {
+      "required": "0.52.0",
+      "installed": "0.52.0",
+      "pass": true
+    },
+    "shapely": {
+      "required": "2.1.2",
+      "installed": "2.1.2",
+      "pass": true
+    },
+    "xgboost": {
+      "required": "3.4.1",
+      "installed": "3.4.1",
+      "pass": true
+    }
+  },
+  "pip_check": {
+    "exit_code": 0,
+    "output": "No broken requirements found."
+  },
+  "raw_files": [
+    {
+      "path": "bus_stops_20251031.csv",
+      "bytes": 20735435,
+      "sha256": "1db7e5d0cdc541e86a957b7584f2ddf8e4b1d29b02594984a01c5752ac13af06"
+    },
+    {
+      "path": "hira_departments_2026_06.xlsx",
+      "bytes": 14821720,
+      "sha256": "97177d2de9c29d5e6fe03c885a2b55cf3b3ec01fd34ded8b55dbc8b37ce98d5c"
+    },
+    {
+      "path": "hira_hospitals_2026_06.xlsx",
+      "bytes": 16919534,
+      "sha256": "458d04f264bfe005cb12078699156ca72ad47b52062e0f79b8140e2635086268"
+    },
+    {
+      "path": "pop_20260831.csv",
+      "bytes": 2568139,
+      "sha256": "0cbb5983a9efad7951548a89ae11c295ed08e95f8d222d15bc5e5e46d5701e24"
+    },
+    {
+      "path": "sgis/1. 행정구역별 격자코드 매핑(adm_grid_mapping).xlsx",
+      "bytes": 21547,
+      "sha256": "6f8059a20d3cb9d8618058ce9e18e3b7dc6a307dabcfa51cfabe43869920c1a9"
+    },
+    {
+      "path": "sgis/2. 제공용 코드(statistics_code).xlsx",
+      "bytes": 82573,
+      "sha256": "6ef68a83b56a8ecb43d8130dcc15abc81cdcc6c6e2894748953ca9232ad68b06"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_가구총괄.csv",
+      "bytes": 239187,
+      "sha256": "f3649951ae0e3877fed2fac41b7fb426e0f5e56d8f2b5efef3b5ab50ce735c80"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_건축년도별주택.csv",
+      "bytes": 2269383,
+      "sha256": "0f2c03ca49edc74abeb71a227900e5b2a284a764b3036e6a02fa01f934bcee0a"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_대분류)_사업체수.csv",
+      "bytes": 2033642,
+      "sha256": "d6839551532b34bea533c25f6adb133e18371093cf41b68bfda5556ffa78f7b7"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_대분류)_종사자수.csv",
+      "bytes": 2215815,
+      "sha256": "f5aeb6d90e625f46559635a6a81d355b314098a6b7bd741a73cd1a8a9467bb09"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_대분류)_총괄사업체수.csv",
+      "bytes": 120351,
+      "sha256": "6959bae49054539263e34abd48b24948cad1bd52c22cd8042321dfcceeac3691"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_대분류)_총괄종사자수.csv",
+      "bytes": 122166,
+      "sha256": "a7045b5974f3b3a95b6adc11d5f1411e6d7e4d04426535079fd6afb1bbb2d2d1"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_중분류)_사업체수.csv",
+      "bytes": 5534819,
+      "sha256": "25be21c8fa3d79e3768078930a1d179b61d4baea0b0c4ad600c3f61d5142bdae"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_산업분류별(11차_중분류)_종사자수.csv",
+      "bytes": 6070767,
+      "sha256": "19e3da3d333f16a80baeff789d8924a0d989a2f78ffd83d9f7cd6759aa143607"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_성연령별인구.csv",
+      "bytes": 7933680,
+      "sha256": "de3645b017c1f3cf5bd86e96d7ea22208bd34fd5f4f3bab7c8dbb4351efc14b2"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_세대구성별가구.csv",
+      "bytes": 699783,
+      "sha256": "7f7259677163d0f4446b5fc95cbdd5bf11c313c156e60d853e71e545a7d5fd45"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_연건평별주택.csv",
+      "bytes": 1101159,
+      "sha256": "ea81ac8cfaf65b8e84be5a1bfdecc631f22798189ce04c22d9b0f79599950dae"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(노년부양비).csv",
+      "bytes": 121197,
+      "sha256": "3e58e8c19f748efcacee694e4fc3c3e6ea094dca17edf54860a537566f761ace"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(노령화지수).csv",
+      "bytes": 125215,
+      "sha256": "13c8b453ee6180f3110ff6ee81394dc3509d83dd403bbfc25bb4a7d956024d2b"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(유년부양비).csv",
+      "bytes": 119341,
+      "sha256": "f0bfea9e69a9f79b71de20a6872cb385d679dbf25cf9edf08397ea7ab4a1cf6a"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(인구밀도).csv",
+      "bytes": 126832,
+      "sha256": "f49dd7b44c122348a15d6474abcbeddc55ffc2df6fc9505b35090db52841ecea"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(총인구).csv",
+      "bytes": 369208,
+      "sha256": "f1189732e02917014f6814c3a650e3097d9f78d7c032573ace533ef90d8a8a9d"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_인구총괄(평균나이).csv",
+      "bytes": 120921,
+      "sha256": "4b3166efa78f3a461747a27824b63af42fbc6969e36b97a4641149ebb10011e8"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_주택유형별주택.csv",
+      "bytes": 655705,
+      "sha256": "8405d6ce46138bfb20e12800087100bb058b26289ff80eab0f0b2c76e7299b91"
+    },
+    {
+      "path": "sgis/2025년기준_2024년_주택총괄_총주택(거처)수.csv",
+      "bytes": 121999,
+      "sha256": "fa7df8ccf9c433ac10fa2911feb35a422c270ba68e4e636acfe99f5411d757fe"
+    },
+    {
+      "path": "sgis/bnd_dong_00_2025_2Q.cpg",
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "path": "sgis/bnd_dong_00_2025_2Q.dbf",
+      "bytes": 149608,
+      "sha256": "55ef3b6114e10424bc2e0e35e99b4ae0cf0d2c55ab9a8afe9a063337c894f266"
+    },
+    {
+      "path": "sgis/bnd_dong_00_2025_2Q.prj",
+      "bytes": 435,
+      "sha256": "e21b26451491c617318aab7d28abf4d07f5facc2aed1564e082ec8d4268cfa3b"
+    },
+    {
+      "path": "sgis/bnd_dong_00_2025_2Q.shp",
+      "bytes": 135002820,
+      "sha256": "8f5dec93ce06be03402d24c69b7f4643386945ba291cbc9e0b59b4fee992371d"
+    },
+    {
+      "path": "sgis/bnd_dong_00_2025_2Q.shx",
+      "bytes": 28572,
+      "sha256": "b04b98b8807bff242506fb1cad2b9cc38c23e4e855f5fc4a47850a27145e4d6b"
+    },
+    {
+      "path": "sgis/bnd_sigungu_00_2025_2Q.cpg",
+      "bytes": 5,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824"
+    },
+    {
+      "path": "sgis/bnd_sigungu_00_2025_2Q.dbf",
+      "bytes": 9958,
+      "sha256": "18f7d3a5f0fd8cf12e4a5deca3faf52133db4f7221dfbeccedf94ec06b58ece6"
+    }
+  ],
+  "exit_code": 0,
+  "seconds": 1499.875,
+  "stages": [
+    {
+      "stage": "s01_indicators",
+      "started_after_seconds": 1.687,
+      "seconds": 143.969
+    },
+    {
+      "stage": "s02_vulnerability",
+      "started_after_seconds": 145.656,
+      "seconds": 65.141
+    },
+    {
+      "stage": "s02b_ml_validation",
+      "started_after_seconds": 210.797,
+      "seconds": 92.953
+    },
+    {
+      "stage": "s03_breakeven",
+      "started_after_seconds": 303.75,
+      "seconds": 1.015
+    },
+    {
+      "stage": "s04_yeoncheon_sim",
+      "started_after_seconds": 304.765,
+      "seconds": 176.485
+    },
+    {
+      "stage": "s05_scenarios",
+      "started_after_seconds": 481.25,
+      "seconds": 410.812
+    },
+    {
+      "stage": "s06_surrogate",
+      "started_after_seconds": 892.062,
+      "seconds": 607.813
+    }
+  ],
+  "warnings": [],
+  "artifacts": [
+    {
+      "path": "analysis/data/processed/gyeonggi_eupmyeondong_carbon_breakeven.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 600,
+      "columns": 39,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "afae5e485f251f98f1dedf2c41bf557a25ca706ea326338596d702bedac947bd",
+      "bytes": 290540,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/data/processed/gyeonggi_eupmyeondong_indicators.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 601,
+      "columns": 22,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "c1faedfc395b07e44d63e8e24e44f1a486b0ee5b6eaebda34d0832008de2434c",
+      "bytes": 177547,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/data/processed/gyeonggi_eupmyeondong_vulnerability_scores.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 600,
+      "columns": 35,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "f516c0771b1674e6e547dcf3541cea2bc8c3d6303478f112392ae14e49f90257",
+      "bytes": 278635,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_ml_validation.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "5307a698187ef853efc64a8a1d1dd4750362cb63e95e05fb2f8c6a4e79b8f4d5",
+      "bytes": 934,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_scenarios.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "f9aa82c5d58e3fda2f9bf7679fa0a55f5bd6fe84d5c1e7e9bd511f7f234c5b1d",
+      "bytes": 5716,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_stage1.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "679a4ff3d2213cd5845ea76d7b5c283eea4bf932e9ff95806730815da35d82bb",
+      "bytes": 1078,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_stage2_breakeven.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "057e35f9d0d04149e7dd456e9adea915cafe0abcd30692754dbc8e0fd993ed1d",
+      "bytes": 693,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_stage2_sim.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "5ca36c17f2928aa99f2f2e92ddcc63533ee0740a9a20e6685d0d848f522ca521",
+      "bytes": 1949,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/summary_surrogate.json",
+      "exists": true,
+      "pass": true,
+      "sha256": "371e6f45de912f9bcb41dd3702d4e094c16d1326716f1479a4ead0d1666e9d33",
+      "bytes": 315,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t10_yeoncheon_detail.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 48,
+      "columns": 22,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "c50fb22e9ac4c5c6d7dc5d3a728339fba761408ce7bc1cdd8c11e5004012674e",
+      "bytes": 7157,
+      "binary_identical": false
+    },
+    {
+      "path": "analysis/output/tables/t11_emission_factor_uncertainty.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 8,
+      "columns": 7,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "4a760132a8fe6c48fcec3accc6ee6fbc540b1ce387cf2e21b6e62ca428e78496",
+      "bytes": 391,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t12_vulnerable_120.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 120,
+      "columns": 12,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "21e837b253e1bcb2de5492ed242097e86d7e6da290e64529a109618101f88166",
+      "bytes": 13742,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t13_cluster_methods.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 3,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "88e6cdf0b0c19b8334e670cf1a022ff92173db9f699775fd9681a41d012ce016",
+      "bytes": 185,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t14_bootstrap_stability.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 4,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "b7f30149a8a7220e81d5fe5c67f51022e160e59844342bd61e85b23ed6a03b4c",
+      "bytes": 214,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t15_feature_importance.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 4,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "ea41b2e0359d1fab28c4317ea21f6f923de503a5da864d99e21c135264862c36",
+      "bytes": 272,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t16_isolated_probability.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 600,
+      "columns": 6,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "3e69edd0fe26273837109dfc436cc25f17da586605a259fe59def302e51933a9",
+      "bytes": 34133,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t17_scenarios.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 6000,
+      "columns": 27,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "f23d06cb0f11047bcfb3434d0fe47762c77412cfca01aefcb6dca91b4701122a",
+      "bytes": 2334837,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t18_surrogate_metrics.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 15,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "9f10dd0923c56ac6cd7df24bb386fe1ccba1d1b033a9d6ea0982bf2788a83d1e",
+      "bytes": 711,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t19_shap_importance.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 38,
+      "columns": 3,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "b0fb83d62c5dd532a73b6ecf0b80ce8d6b930710a5084f04ffd253d80cc5c114",
+      "bytes": 1535,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t1_top30.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 30,
+      "columns": 11,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "7f3651c9a1204a018ecc5dc452c8b88373e89559f2dc90a23f91be24737459e6",
+      "bytes": 3133,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t20_recommend_grid.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 120,
+      "columns": 10,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "0d5da9ddb79ef8d1cc9fdeda8a5e9bdaffdad70821b0023017ffb08c63c1ff41",
+      "bytes": 7492,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t21_recommendation.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 15,
+      "columns": 7,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "4285456aae85ae5ca2fc001c71c3ccc9463faa05d7fb6b689f1efdf8d0e0c6fe",
+      "bytes": 1657,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t22_final_recommendation.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 15,
+      "columns": 10,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "4de2ed547f8ac89f45364cd63e2cba70c9fe535765ddc5a31f3b12bd4a92b82c",
+      "bytes": 1660,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t2_sensitivity.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 6,
+      "columns": 3,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "ba3a3c993ebbf7585904966e68645a9a874cde62e8914e87d19fb74109a9e69e",
+      "bytes": 324,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t3_cluster_profile.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 4,
+      "columns": 7,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "d173c298ebd97b8989c19e228a382436aaa8dfa395e66e0c23818c9b3321eefb",
+      "bytes": 306,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t3b_k3_vs_k4.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 4,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "8c28a72f3b292a5c75703a4bae3313ed28e73425752779788534fca04c53af38",
+      "bytes": 125,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t4_sigungu.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 31,
+      "columns": 7,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "d7d3e7da57a65f70e055d6b35c19fa4acd039ef9814f5bb1b5da60bf46308f4b",
+      "bytes": 1448,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t5_rule_by_distance.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 6,
+      "columns": 6,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "2f9321bddfd777345008d18ece403517d4cacc8d5d71d2eb536886f0cd072cf4",
+      "bytes": 333,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t6_curve.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 84,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "04ed031e39b2134378dc94ed691f71f41c04943eae94aa37192b4a87269a9e15",
+      "bytes": 1568,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t7_roadfactor_sensitivity.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 3,
+      "columns": 4,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "ca9e51d435805635d3c33bb10fa4ec154dfb722f9cdb510b92b7ca00fccbc7a9",
+      "bytes": 74,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/tables/t8_yeoncheon_grid.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 128,
+      "columns": 23,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "d4d343d5e6a824171e5f3ff8aeffe5c4b05b85e4d2dd1f9c02a0e861fdd8106f",
+      "bytes": 18693,
+      "binary_identical": false
+    },
+    {
+      "path": "analysis/output/tables/t9_yeoncheon_villages.csv",
+      "exists": true,
+      "pass": true,
+      "rows": 10,
+      "columns": 5,
+      "max_numeric_delta": 0.0,
+      "differences": [],
+      "sha256": "208fb566f4f120e14fb47a0d22c3a7da9def9a60443e3171f38ed8ef592ea42f",
+      "bytes": 619,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig1_vulnerability_map.png",
+      "exists": true,
+      "old_dimensions": [
+        1060,
+        1240
+      ],
+      "new_dimensions": [
+        1060,
+        1240
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "382ea1c9ecb62fb96e234ebbb7f04e9575a903912b752ac941cf732ed6170abf",
+      "bytes": 358048,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig2_cluster_map.png",
+      "exists": true,
+      "old_dimensions": [
+        1060,
+        1240
+      ],
+      "new_dimensions": [
+        1060,
+        1240
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "10d9b4495ad82ec0c60f8e6558a834b47a750e4821902465928c397527d3eb0b",
+      "bytes": 360785,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig3_sigungu_bar.png",
+      "exists": true,
+      "old_dimensions": [
+        942,
+        764
+      ],
+      "new_dimensions": [
+        942,
+        764
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "af9f21b01b2b408ea9693acc5ccb97a9e3923b2cf41f0a2d95e4d2daac9c1795",
+      "bytes": 99521,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig4_scatter.png",
+      "exists": true,
+      "old_dimensions": [
+        928,
+        710
+      ],
+      "new_dimensions": [
+        928,
+        710
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "a02193aa752ee4bf5f2a24072acf2114f7dfe5ee5890a595a59d20f4dd765e95",
+      "bytes": 154516,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig5_breakeven_curve.png",
+      "exists": true,
+      "old_dimensions": [
+        1043,
+        721
+      ],
+      "new_dimensions": [
+        1043,
+        721
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "0d19f24f86238ed3dfedae6c782358e9fe5023c1cfea389bde034cb9de356c63",
+      "bytes": 60549,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig6_yeoncheon_heatmap.png",
+      "exists": true,
+      "old_dimensions": [
+        2106,
+        691
+      ],
+      "new_dimensions": [
+        2106,
+        691
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "0bc29c46b59a2fe06dafbe8d0407872f139e2556653e433c95686d817c469f8b",
+      "bytes": 152172,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig7_ml_validation.png",
+      "exists": true,
+      "old_dimensions": [
+        2109,
+        712
+      ],
+      "new_dimensions": [
+        2109,
+        712
+      ],
+      "pixels_identical": true,
+      "pass": true,
+      "sha256": "b26697122675df85cbba5a1d6f75dd25b1bb51a448246a3beb5a3c35d12487ae",
+      "bytes": 212246,
+      "binary_identical": true
+    },
+    {
+      "path": "analysis/output/figures/fig8_shap.png",
+      "exists": true,
+      "old_dimensions": [
+        2070,
+        814
+      ],
+      "new_dimensions": [
+        2070,
+        814
+      ],
+      "pixels_identical": false,
+      "pass": true,
+      "sha256": "ce1a17bbb4a1d6b67fb392efaf115a1e0260ad4971721ce7b37593112dd173f6",
+      "bytes": 263857,
+      "binary_identical": false
+    },
+    {
+      "path": "analysis/data/processed/gyeonggi_eupmyeondong_indicators.gpkg",
+      "exists": true,
+      "pass": true,
+      "rows": 601,
+      "sha256": "16a4aefaff7086f82f4bee9faa6dde2d142a40ffdd529718cd7c1da87b85d6ac",
+      "bytes": 9805824
+    },
+    {
+      "path": "analysis/data/processed/gyeonggi_eupmyeondong_vulnerability_scores.gpkg",
+      "exists": true,
+      "pass": true,
+      "rows": 600,
+      "sha256": "474b188340d3bc039369d733705eed87d8db9fcd3a0a3f6c5f58c38581e3383b",
+      "bytes": 9830400
+    }
+  ],
+  "baseline_logs_not_compared": [
+    "tables/run_log.txt",
+    "tables/s03_log.txt",
+    "tables/s04_log.txt",
+    "tables/s05_log.txt",
+    "tables/s06_log.txt"
+  ],
+  "core_checks": [
+    {
+      "name": "분석 읍면동",
+      "actual": 600,
+      "expected": 600,
+      "pass": true
+    },
+    {
+      "name": "취약지역",
+      "actual": 120,
+      "expected": 120,
+      "pass": true
+    },
+    {
+      "name": "고령 고립형",
+      "actual": 68,
+      "expected": 68,
+      "pass": true
+    },
+    {
+      "name": "시군",
+      "actual": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "시나리오",
+      "actual": 6000,
+      "expected": 6000,
+      "pass": true
+    },
+    {
+      "name": "시군당 시나리오",
+      "actual": 400,
+      "expected": 400,
+      "pass": true
+    },
+    {
+      "name": "판단 일치율",
+      "actual": 0.8,
+      "expected": 0.8,
+      "pass": true
+    },
+    {
+      "name": "취약지역 명단 행수",
+      "actual": 120,
+      "expected": 120,
+      "pass": true
+    },
+    {
+      "name": "취약지역 코드 중복",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "시나리오 표 행수",
+      "actual": 6000,
+      "expected": 6000,
+      "pass": true
+    },
+    {
+      "name": "시군별 시나리오 균등",
+      "actual": true,
+      "expected": true,
+      "pass": true
+    },
+    {
+      "name": "현행 수송률 0인 시군",
+      "actual": 15,
+      "expected": 15,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_indicators.gpkg 행수",
+      "actual": 601,
+      "expected": 601,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_indicators.gpkg 좌표계",
+      "actual": 5179,
+      "expected": 5179,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_indicators.gpkg geometry 누락",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg 행수",
+      "actual": 600,
+      "expected": 600,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg 좌표계",
+      "actual": 5179,
+      "expected": 5179,
+      "pass": true
+    },
+    {
+      "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg geometry 누락",
+      "actual": 0,
+      "expected": 0,
+      "pass": true
+    }
+  ],
+  "xgboost": {
+    "min_r2": 0.655,
+    "max_r2": 0.906
+  },
+  "source_sha256": {
+    "analysis/src/config.py": "60ad28283f8faa89c03a1409fc0b4e7602675a101e862a3b27b531768ab5f650",
+    "analysis/src/run_all.py": "ff78d9f5c9f1475543e822b4a45496d480a955eb3dcd007fd177ec239360db98",
+    "analysis/src/s00_download.py": "ad63d092e8762925872ea953cb3cff27ac03fd550d98284a013d3f4b90170a41",
+    "analysis/src/s01_indicators.py": "aef51d1f5f4c5216c9e425d7a5d609b05d0a6dde8bf2eb4ec39ec4bb5dee97ab",
+    "analysis/src/s02_vulnerability.py": "2cdffe1a0a5406437ec2aa65cf0b4043ff866950511b7f5ee9429377ad0f3224",
+    "analysis/src/s02b_ml_validation.py": "a69d9bde3bf2544c0a2d7c1c8b71455f34f4a02394eedb60e9a68eebea445dca",
+    "analysis/src/s03_breakeven.py": "0adaf45ae4a8411497fb46256300a64d1a7812a1406fd13ece7941d12268f78d",
+    "analysis/src/s04_yeoncheon_sim.py": "791de1374467a0ecc279db67bb84bb4f59f7c426f36b6caabdd704476cc84be3",
+    "analysis/src/s05_scenarios.py": "b031aadebf5ea3c46a67f10838337af6cfd02ca3fb617ca259c2b0633da40d26",
+    "analysis/src/s06_surrogate.py": "b8966f5983fae4e51c5543ca9c17c8a0d4a6dff16ce9b60b8434965f74cbd15c",
+    "analysis/src/verify_outputs.py": "948d591ddde7eff299a51b9216e7ca78d679faf88d715dd6e769b1b771cc2153"
+  },
+  "pass": true,
+  "tested_base_commit": "11ac53f23539767a5c94add0f192d03533f81a6f",
+  "shap_repeat": {
+    "pass": true,
+    "figure_binary_identical": true,
+    "importance_binary_identical": true,
+    "rng_state_preserved": true,
+    "before": {
+      "figure": "ce1a17bbb4a1d6b67fb392efaf115a1e0260ad4971721ce7b37593112dd173f6",
+      "importance": "b0fb83d62c5dd532a73b6ecf0b80ce8d6b930710a5084f04ffd253d80cc5c114"
+    },
+    "after": {
+      "figure": "ce1a17bbb4a1d6b67fb392efaf115a1e0260ad4971721ce7b37593112dd173f6",
+      "importance": "b0fb83d62c5dd532a73b6ecf0b80ce8d6b930710a5084f04ffd253d80cc5c114"
+    },
+    "test": "전체 실행 그림과 다른 초기 난수 상태에서 재생성한 SHAP 그림·중요도 표 대조"
+  },
+  "output_checks": {
+    "pass": true,
+    "checks": [
+      {
+        "name": "분석 읍면동",
+        "actual": 600,
+        "expected": 600,
+        "pass": true
+      },
+      {
+        "name": "취약지역",
+        "actual": 120,
+        "expected": 120,
+        "pass": true
+      },
+      {
+        "name": "고령 고립형",
+        "actual": 68,
+        "expected": 68,
+        "pass": true
+      },
+      {
+        "name": "시나리오 수",
+        "actual": 6000,
+        "expected": 6000,
+        "pass": true
+      },
+      {
+        "name": "시군 수",
+        "actual": 15,
+        "expected": 15,
+        "pass": true
+      },
+      {
+        "name": "시군당 조건",
+        "actual": 400,
+        "expected": 400,
+        "pass": true
+      },
+      {
+        "name": "AI·직접 시뮬레이션 판단 일치율",
+        "actual": 0.8,
+        "expected": 0.8,
+        "pass": true
+      },
+      {
+        "name": "취약지역 명단",
+        "actual": 120,
+        "expected": 120,
+        "pass": true
+      },
+      {
+        "name": "취약지역 코드 중복",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "시나리오 행수",
+        "actual": 6000,
+        "expected": 6000,
+        "pass": true
+      },
+      {
+        "name": "시군별 조건 수",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "최종 추천 시군",
+        "actual": 15,
+        "expected": 15,
+        "pass": true
+      },
+      {
+        "name": "현행 수송률 0인 시군",
+        "actual": 15,
+        "expected": 15,
+        "pass": true
+      },
+      {
+        "name": "CSV 산출물 수",
+        "actual": 26,
+        "expected": 26,
+        "pass": true
+      },
+      {
+        "name": "요약 JSON 수",
+        "actual": 6,
+        "expected": 6,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_carbon_breakeven.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_carbon_breakeven.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_indicators.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_indicators.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_vulnerability_scores.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_vulnerability_scores.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t10_yeoncheon_detail.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t10_yeoncheon_detail.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t11_emission_factor_uncertainty.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t11_emission_factor_uncertainty.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t12_vulnerable_120.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t12_vulnerable_120.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t13_cluster_methods.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t13_cluster_methods.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t14_bootstrap_stability.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t14_bootstrap_stability.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t15_feature_importance.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t15_feature_importance.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t16_isolated_probability.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t16_isolated_probability.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t17_scenarios.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t17_scenarios.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t18_surrogate_metrics.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t18_surrogate_metrics.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t19_shap_importance.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t19_shap_importance.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t1_top30.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t1_top30.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t20_recommend_grid.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t20_recommend_grid.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t21_recommendation.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t21_recommendation.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t22_final_recommendation.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t22_final_recommendation.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t2_sensitivity.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t2_sensitivity.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t3b_k3_vs_k4.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t3b_k3_vs_k4.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t3_cluster_profile.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t3_cluster_profile.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t4_sigungu.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t4_sigungu.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t5_rule_by_distance.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t5_rule_by_distance.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t6_curve.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t6_curve.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t7_roadfactor_sensitivity.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t7_roadfactor_sensitivity.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t8_yeoncheon_grid.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t8_yeoncheon_grid.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "t9_yeoncheon_villages.csv: 빈 표 여부",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "t9_yeoncheon_villages.csv: 무한대 여부",
+        "actual": false,
+        "expected": false,
+        "pass": true
+      },
+      {
+        "name": "그림 수",
+        "actual": 8,
+        "expected": 8,
+        "pass": true
+      },
+      {
+        "name": "fig1_vulnerability_map.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig2_cluster_map.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig3_sigungu_bar.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig4_scatter.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig5_breakeven_curve.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig6_yeoncheon_heatmap.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig7_ml_validation.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "fig8_shap.png: 유효 크기",
+        "actual": true,
+        "expected": true,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_indicators.gpkg: 행수",
+        "actual": 601,
+        "expected": 601,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_indicators.gpkg: 좌표계",
+        "actual": 5179,
+        "expected": 5179,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_indicators.gpkg: geometry 누락",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg: 행수",
+        "actual": 600,
+        "expected": 600,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg: 좌표계",
+        "actual": 5179,
+        "expected": 5179,
+        "pass": true
+      },
+      {
+        "name": "gyeonggi_eupmyeondong_vulnerability_scores.gpkg: geometry 누락",
+        "actual": 0,
+        "expected": 0,
+        "pass": true
+      }
+    ]
+  },
+  "web_build": {
+    "pass": true,
+    "command": [
+      "npm ci --ignore-scripts --no-audit --no-fund",
+      "npm run build"
+    ],
+    "note": "TypeScript 타입 검사 + Vite 8.3.1 빌드 성공. JS 청크 500kB 초과 경고는 비차단 성능 경고."
+  },
+  "report_qa": {
+    "pass": true,
+    "pdf_pages": 8,
+    "visual_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "layout": "한글·표·그림·페이지 번호 깨짐/잘림 없음",
+    "team_ai_runtime_text_checks": true,
+    "report_dependency_lock_install": true,
+    "sha256": {
+      "report/노인공경버스어벤저스_분석보고서.pdf": "1920eab1004e6d8b2e699bca43fca767d02a05c068c35cd0e508d0d196440ef8",
+      "report/노인공경버스어벤저스_분석보고서.docx": "f6ddeec6a0a794f109e09b83ccc4241e14da48a9544ed62e1e06491cfc5eab38"
+    }
+  }
+}

@@ -17,6 +17,7 @@
 | 분석보고서 DOCX | [report/노인공경버스어벤저스_분석보고서.docx](report/노인공경버스어벤저스_분석보고서.docx) |
 | 제출 전 체크리스트 | [report/제출_체크리스트.md](report/제출_체크리스트.md) |
 | 실제 분석 재현 안내 | [analysis/README.md](analysis/README.md) |
+| 최종 재실행 검증 기록 | [analysis/validation/README.md](analysis/validation/README.md) |
 | AI 활용 내역 | [docs/AI활용내역.md](docs/AI활용내역.md) |
 | 분석 표·수치 | [analysis/output/tables](analysis/output/tables) |
 | 분석 그림 | [analysis/output/figures](analysis/output/figures) |
@@ -71,6 +72,7 @@ traffic-data-analysis-contest/
 │  ├─ data/processed/       # 가공 결과
 │  ├─ output/tables/        # 보고서 표 원수치
 │  ├─ output/figures/       # 분석 그림
+│  ├─ validation/           # 전체 재실행·수치 검증 기록
 │  ├─ requirements.txt
 │  └─ README.md
 ├─ src/                      # React 웹 데모
@@ -86,9 +88,9 @@ traffic-data-analysis-contest/
 
 ## 실제 분석 재현
 
-원자료는 약 300MB로 저장소에 포함하지 않았습니다. 공개 원자료의 다운로드 방법과 출처는 [analysis/README.md](analysis/README.md)에 정리되어 있습니다.
+이번 검증에 사용한 원자료는 32개 파일, 약 220MB로 저장소에 포함하지 않았습니다. 공개 원자료의 다운로드 방법과 출처는 [analysis/README.md](analysis/README.md)에 정리되어 있습니다.
 
-Windows 기준으로 다음 순서로 전체 분석을 다시 실행할 수 있습니다.
+Python 3.12 이상이 필요하며 Windows / Python 3.12.14에서 검증했습니다. 다음 순서로 전체 분석을 다시 실행할 수 있습니다.
 
 ```bash
 cd analysis
@@ -96,6 +98,7 @@ python -m venv .venv
 .venv/Scripts/python -m pip install -r requirements.txt
 .venv/Scripts/python src/s00_download.py
 .venv/Scripts/python src/run_all.py
+.venv/Scripts/python src/verify_outputs.py
 ```
 
 분석에 사용한 난수 시드는 코드에 고정되어 있으며, 동일한 입력에서는 같은 분석 결과가 생성되도록 구성했습니다.
@@ -111,7 +114,7 @@ npm run build      # 타입 검사 + 배포용 빌드
 npm run typecheck  # 타입 검사
 ```
 
-Node.js 20 이상을 권장합니다.
+Node.js 22.12 이상을 권장합니다. 분석·보고서 재현과 웹 데모 실행은 별도의 절차입니다.
 
 ### 데모 화면
 
@@ -141,7 +144,7 @@ AI는 **분석 방법**과 **작업 보조**를 구분해 사용했습니다.
 
 - 분석 방법: K-평균, 가우시안 혼합, 계층 군집, 랜덤포레스트, XGBoost, SHAP
 - 생성형 AI 보조: 공개데이터 탐색, 코드·문서 초안, 검토 및 저장소 정리
-- 최종 수치와 결과는 팀원이 코드를 재실행하고 산출물과 대조하는 방식으로 확인
+- 자동 재실행·산출물 대조 기록을 공개하며, 최종 수치·가정·정책 해석은 제출 전 팀원 확인 필요
 
 자세한 공개 내용은 [AI 활용 내역](docs/AI활용내역.md)에 정리했습니다.
 

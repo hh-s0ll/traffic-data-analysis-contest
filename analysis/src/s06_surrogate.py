@@ -1,6 +1,6 @@
 """2단계-④: AI 대리모델(메타모델)로 운영 성과 민감도 분석과 시군별 운영 추천 (정책 시뮬레이션)
 
-s05 시나리오 데이터(15개 시군 × 200개 조건)로, 지역 특성과 운영조건 → 운영 성과를 예측하는 모델을 학습한다.
+s05 시나리오 데이터(15개 시군 × 400개 조건)로, 지역 특성과 운영조건 → 운영 성과를 예측하는 모델을 학습한다.
 - 모델: XGBoost, 랜덤포레스트, 평균값 기준모델
 - 검증: 시군 단위 GroupKFold(5겹). 검증 시군의 시나리오는 학습에 쓰지 않는다. 표본 밖 예측의 MAE·R²를 보고한다.
 - 설명: 성능이 좋은 모델에 SHAP(TreeExplainer)을 적용해 탄소 변화율·수송률을 좌우하는 요인을 본다.
@@ -30,6 +30,7 @@ LABEL = {"rate": "예약자 비율", "part": "참여율", "morning": "오전 진
          "평균정류장밀도": "정류장 밀도", "평균차고지거리km": "차고지 거리"}
 TARGETS = {"탄소변화율": "탄소 변화율(%)", "수송률": "수송률", "필요차량": "필요 차량(대)", "차량km_일": "차량km/일", "최대대기_분": "최대 대기(분)"}
 SERVE_MIN = 0.5  # 운영 판단 기준: 참여자 절반 이상을 공동배차로 수송
+SHAP_PLOT_SEED = 42  # beeswarm의 점 겹침 배치까지 재현
 
 
 def prepare(df):
@@ -66,6 +67,16 @@ def evaluate(df):
     return pd.DataFrame(rows), best
 
 
+def seeded_beeswarm(explanation, ax, color_bar):
+    """SHAP 0.52의 전역 난수 기반 점 배치를 고정하고 호출자의 난수 상태를 보존한다."""
+    rng_state = np.random.get_state()
+    try:
+        np.random.seed(SHAP_PLOT_SEED)
+        shap.plots.beeswarm(explanation, max_display=10, show=False, ax=ax, plot_size=None, color_bar=color_bar)
+    finally:
+        np.random.set_state(rng_state)
+
+
 def shap_figure(df, best):
     X = prepare(df).rename(columns=LABEL)
     fig, axes = plt.subplots(1, 2, figsize=(14, 5.2))
@@ -75,7 +86,7 @@ def shap_figure(df, best):
                              random_state=42, n_jobs=4).fit(X, df[t])
         sv = shap.TreeExplainer(model)(X)
         plt.sca(ax)
-        shap.plots.beeswarm(sv, max_display=10, show=False, ax=ax, plot_size=None, color_bar=(t == "수송률"))
+        seeded_beeswarm(sv, ax=ax, color_bar=(t == "수송률"))
         ax.set_title(f"{TARGETS[t]}에 대한 SHAP (XGBoost)", fontsize=11)
         ax.tick_params(labelsize=9)
         ax.set_xlabel("SHAP 값 (예측을 올리는 방향 +)", fontsize=9)

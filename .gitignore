@@ -224,3 +224,4 @@ node_modules/
 analysis/data/raw/
 *.zip
 tmp/
+analysis/data/processed/*.gpkg

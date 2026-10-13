@@ -20,7 +20,7 @@ export function ScenarioPicker({ compact }: { compact?: boolean }) {
       </div>
       <p className={s.basis}>
         <strong>차량 전환율 {pct(scenario.conversionRate)}</strong>
-        {scenario.provisional && <span className={s.provisional}>임시값</span>}
+        {scenario.provisional && <span className={s.provisional}>가정값</span>}
         <span>{scenario.basis}</span>
       </p>
       {!compact && (

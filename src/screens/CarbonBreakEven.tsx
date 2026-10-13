@@ -94,8 +94,8 @@ function Calculator({ factors }: { factors: EmissionFactor[] }) {
         lead="똑버스는 마을을 돌며 사람을 태우므로 적게 타면 오히려 승용차보다 탄소를 더 냅니다. 몇 명 이상 함께 타야 승용차 이동을 대체해 탄소가 줄어드는지 계산합니다."
       />
       <MockNotice>
-        배출계수, 기본·적극 시나리오의 전환율, 거리 가정은 임시값입니다. 실제 계수와 전환율은 출처 확인 후 바꿔
-        넣습니다.
+        배출계수는 분석보고서의 참고값이며 차종 대리 계수와 충전손실 가정을 포함합니다. 전환율과 거리는 시나리오
+        가정입니다. 이 화면의 계산은 가상 데모이며 실제 운영 효과가 아닙니다.
       </MockNotice>
 
       <ScenarioPicker />
@@ -300,7 +300,7 @@ function Calculator({ factors }: { factors: EmissionFactor[] }) {
             </p>
             <p className={s.factorNote}>
               배출계수는 차량이 1km 달릴 때 나오는 이산화탄소 양(kg)입니다. {car.label} {car.kgPerKm}kg, {vanF.label}{' '}
-              {vanF.kgPerKm}kg 모두 임시값이며 출처 확인이 필요합니다.
+              {vanF.kgPerKm}kg는 보고서 참고 계수입니다. 경유 승합은 대리 차종 값, 전기는 충전손실 가정을 포함하며 실측값이 아닙니다.
             </p>
           </div>
         </section>
